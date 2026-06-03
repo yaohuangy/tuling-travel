@@ -395,7 +395,7 @@ TripPlannerDemo/
 - `frontend/src/services/api.ts`
   Axios 封装与后端接口通信。
 - `frontend/src/views/Home.vue`
-  规划页，收集用户输入并发起行程生成请求。
+  规划页，通过三维度结构化 chips（旅行偏好 / 饮食偏好 / 额外要求） + 补充文本框收集用户需求，合并后传给后端生成行程。
 - `frontend/src/views/Result.vue`
   结果展示页，承接 itinerary、地图、天气和导出交互。
 - `frontend/src/views/History.vue`
