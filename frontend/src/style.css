@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 min-w-[320px] font-sans text-gray-800 antialiased;
+    background:
+      radial-gradient(circle at top left, rgba(175, 198, 255, 0.55), transparent 28%),
+      radial-gradient(circle at right 18%, rgba(181, 150, 255, 0.3), transparent 20%),
+      linear-gradient(180deg, #eef4ff 0%, #edf2f9 100%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .card-glow {
+    @apply rounded-3xl bg-white/90 shadow-[0_22px_55px_rgba(98,116,164,0.12)] backdrop-blur-[14px];
+  }
+
+  .btn-primary {
+    @apply border-none rounded-2xl px-6 py-3.5 font-bold cursor-pointer
+           bg-gradient-to-br from-brand-400 to-accent-500 text-white
+           shadow-[0_18px_35px_rgba(120,129,225,0.25)]
+           hover:shadow-[0_22px_40px_rgba(120,129,225,0.35)]
+           transition-shadow duration-200
+           disabled:opacity-70 disabled:cursor-wait;
+  }
+
+  .btn-secondary {
+    @apply border-none rounded-2xl px-5 py-3 font-bold cursor-pointer
+           bg-brand-50 text-brand-600
+           hover:bg-brand-100 transition-colors duration-150;
+  }
+
+  .section-heading {
+    @apply flex items-center gap-2.5 mb-4 pb-3.5
+           border-b border-brand-200/30 text-gray-700 text-base font-bold;
+  }
+}
