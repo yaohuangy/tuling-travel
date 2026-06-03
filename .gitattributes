@@ -1,0 +1,4 @@
+# 把自动生成/第三方文件排除出语言统计
+package-lock.json linguist-generated=true
+frontend/dist/** linguist-generated=true
+assets/showcase/** linguist-generated=true
